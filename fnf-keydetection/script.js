@@ -1,3 +1,4 @@
+var color = [0,0]
 var keys = {
   38:{
     "id":"up"
@@ -10,13 +11,18 @@ var keys = {
   },
   39:{
     "id":"right"
+  },
+  65:{
+    "id":"a"
+  },
+  83:{
+    "id":"s"
   }
 }
 window.onkeydown = function(e) {
   console.log(e.keyCode)
   console.log(keys[e.keyCode])
   if (keys[e.keyCode] != undefined) {
-    console.log('hoi')
     document.getElementById(keys[e.keyCode].id).style.background = 'purple'
     console.log(keys[e.keyCode].feature)
     if (keys[e.keyCode].feature != undefined) {
